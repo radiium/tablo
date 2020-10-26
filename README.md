@@ -4,6 +4,8 @@
 
 New tab browser extension for Display random image from MoMA museum or Tate modern museum (with image details and historic panel). Available in dark or light theme.
 
+![screenshot](https://github.com/radiium/tablo/blob/main/.github/capture.jpg)
+
 This project is an angular template for creating cross browser extension (Firefox/Chrome).  
 Generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
