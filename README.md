@@ -5,7 +5,7 @@
 New tab browser extension for Display random image from MoMA museum or Tate modern museum (with image details and historic panel). Available in dark or light theme.
 
 This project is an angular template for creating cross browser extension (Firefox/Chrome).  
-Generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
+Generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
 
 ## Getting Started:
