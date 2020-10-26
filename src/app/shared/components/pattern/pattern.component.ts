@@ -40,7 +40,7 @@ export class PatternComponent extends BaseAbstract implements OnInit, AfterViewI
     }
 
     ngAfterViewInit(): void {
-        this.init()
+        this.init();
     }
 
     private init() {
