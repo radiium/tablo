@@ -1,7 +1,7 @@
 {
   "name": "tablo",
   "description": "New tab web extension",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "scripts": {
     "node:ng": "node --max_old_space_size=8096 ./node_modules/@angular/cli/bin/ng",
     "watch": "ng build --watch",
