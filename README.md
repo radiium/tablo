@@ -1,4 +1,4 @@
-# tablo ![screenshot](https://github.com/radiium/tablo/blob/main/src/assets/icons/favicon-32x32.png)
+# ![screenshot](https://github.com/radiium/tablo/blob/main/src/assets/icons/favicon-32x32.png) tablo
 ## Description:
 
 New tab browser extension for Display random image from MoMA museum or Tate modern museum (with image details and historic panel). Available in dark or light theme.
