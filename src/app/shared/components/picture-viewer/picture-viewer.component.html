@@ -1,0 +1,19 @@
+<div class="picture-viewer-wrapper" *ngIf="picture">
+
+    <app-image
+        [src]="picture.medias?.max"
+        [alt]="picture.title + ' - ' + picture.artiste"
+        (imageLoaded)="onImageLoad($event)"
+        (imageError)="onImageError($event)">
+    </app-image>
+
+    <div class="picture-caption">
+        <div class="picture-caption-text" *ngIf="picture.title">
+            <i>{{ picture.title }}</i>
+        </div>
+        <div class="picture-caption-text" *ngIf="picture.artiste">
+            {{ picture.artiste }}
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,68 @@
+:host {}
+
+.header-wrapper {
+    height: 50px;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    .header-btn {
+        background: transparent;
+        border: none;
+        height: 40px;
+        width: 40px;
+        margin: 0 5px;
+        padding: 0;
+        color: var(--color);
+        cursor: pointer;
+
+        &:active {
+            border: none;
+            outline: none;
+        }
+
+        &:focus {
+            border: none;
+            outline: none;
+        }
+    }
+}
+
+::ng-deep {
+    .app-dialog-mask {
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .app-dialog {
+        background-color: var(--bgColor);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+        // padding: 1rem;
+        width: 50% !important;
+        max-width: 100%;
+        min-width: 90%;
+        min-height: 90%;
+
+        .p-dialog-header {
+            color: var(--color);
+            padding: 1.5rem;
+            border-top-right-radius: 3px;
+            border-top-left-radius: 3px;
+
+            .p-dialog-title {
+                font-size: 2rem;
+            }
+
+            .p-dialog-header-close-icon {
+                font-size: 1.5rem;
+                color: var(--color);
+            }
+        }
+
+        .p-dialog-content {
+            padding: 1rem 1.5rem;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+<div class="header-wrapper">
+    <button class="header-btn" (click)="openPictureDetail()">
+        <i-feather name="alert-circle"></i-feather>
+    </button>
+    <button class="header-btn" (click)="getRandomPicture()">
+        <i-feather name="refresh-ccw"></i-feather>
+    </button>
+
+    <button class="header-btn" (click)="openPictureHistoric()">
+        <i-feather name="grid"></i-feather>
+    </button>
+
+    <div class="flex-spacer"></div>
+
+    <button class="header-btn" (click)="openSettings()">
+        <i-feather name="settings"></i-feather>
+    </button>
+</div>
+
+<p-dialog styleClass="app-dialog" header="Image details" appendTo="body" [draggable]="false" [modal]="true" [dismissableMask]="true" baseZIndex="10000" [(visible)]="showPictureDetail">
+    <app-picture-detail></app-picture-detail>
+</p-dialog>
+
+<p-dialog styleClass="app-dialog" header="Image historic" appendTo="body" [draggable]="false" [modal]="true" [dismissableMask]="true" baseZIndex="10000" [(visible)]="showPictureHistoric">
+    <app-picture-historic></app-picture-historic>
+</p-dialog>
+
+<p-dialog styleClass="app-dialog" header="Settings" appendTo="body" [draggable]="false" [modal]="true" [dismissableMask]="true" baseZIndex="10000" [(visible)]="showSettings">
+    <app-settings></app-settings>
+</p-dialog>

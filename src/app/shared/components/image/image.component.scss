@@ -1,0 +1,61 @@
+:host {
+    height: 100%;
+    width: 100%;
+}
+
+.image-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .image-inner {
+        height: 100%;
+        position: absolute;
+
+        .image-loader {
+            min-width: 100%;
+            min-height: 100%;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            .inner {
+                width: 40px;
+                height: 40px;
+                margin: 100px auto;
+                background-color: var(--bgColorHover);
+                border-radius: 100%;
+                animation: imageLoader 1.0s infinite ease-in-out;
+            }
+        }
+
+        .image {
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            opacity: 0;
+            transition: opacity ease-in-out .2s;
+
+            &.is-loaded {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@keyframes imageLoader {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1.0);
+        opacity: 0;
+    }
+}

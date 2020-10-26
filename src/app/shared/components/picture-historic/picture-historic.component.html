@@ -1,0 +1,15 @@
+<div class="picture-historic-wrapper" *ngIf="pictureState">
+    <div class="picture-historic-item"
+        *ngFor="let picture of pictureState.items; let i = index"
+        [class.picture-historic-item-selected]="i === pictureState.currentIndex"
+        (click)="selectPicture(i)">
+
+        <div class="item-img">
+            <img [src]="picture?.medias?.mini" alt="">
+        </div>
+        <div class="item-title">
+            {{ picture.title }}
+        </div>
+
+    </div>
+</div>
