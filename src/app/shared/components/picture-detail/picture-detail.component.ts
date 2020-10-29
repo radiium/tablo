@@ -23,8 +23,11 @@ export class PictureDetailComponent extends BaseAbstract implements OnInit {
     ngOnInit(): void {
         this.subs.pictureState = this.pictureSrv.$state.subscribe({
             next: (state: PictureState) => {
-                this.picture = state.items[state.currentIndex];
-                this.pictureData = this.parsePicture(this.picture);
+                if (state) {
+                    this.picture = state.items[state.currentIndex];
+                    this.picture = state.items[state.currentIndex];
+                    this.pictureData = this.parsePicture(this.picture);
+                }
             }
         });
     }

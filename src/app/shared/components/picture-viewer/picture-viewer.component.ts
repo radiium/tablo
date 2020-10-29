@@ -24,9 +24,10 @@ export class PictureViewerComponent extends BaseAbstract implements OnInit, OnDe
     ngOnInit(): void {
         super.ngOnInit();
         this.pictureSrv.$state.subscribe({
-            next: (pictureState: PictureState) => {
-                console.log(pictureState);
-                this.picture = pictureState.items[pictureState.currentIndex];
+            next: (state: PictureState) => {
+                if (state) {
+                    this.picture = state.items[state.currentIndex];
+                }
             }
         });
         this.initZooming();

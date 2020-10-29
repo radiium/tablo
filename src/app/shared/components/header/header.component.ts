@@ -24,8 +24,10 @@ export class HeaderComponent extends BaseAbstract implements OnInit {
 
     ngOnInit(): void {
         this.pictureSrv.$state.subscribe({
-            next: (pictureState: PictureState) => {
-                this.pictureState = pictureState;
+            next: (state: PictureState) => {
+                if (state) {
+                    this.pictureState = state;
+                }
             }
         });
     }

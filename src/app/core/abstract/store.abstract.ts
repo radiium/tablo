@@ -31,6 +31,9 @@ export abstract class AbstractStore<T> {
     }
 
     protected setState(state: T): void {
+        if (!state) {
+            state = this.DEFAULT_STATE;
+        }
         this.browserAPIService.setItemStorage(this.STORAGE_KEY, state);
         this.state.next(state);
     }
