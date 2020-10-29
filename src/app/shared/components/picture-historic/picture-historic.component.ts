@@ -22,7 +22,9 @@ export class PictureHistoricComponent extends BaseAbstract implements OnInit {
     ngOnInit(): void {
         this.subs.pictureState = this.pictureSrv.$state.subscribe({
             next: (state: PictureState) => {
-                this.pictureState = state;
+                if (state) {
+                    this.pictureState = state;
+                }
             }
         });
     }
